@@ -61,7 +61,7 @@
    7. certificate
    8. results[]
 
-7. Education Qualification (User)
+7. Education Qualification (Employee)
    1. user
    2. education_type
    3. group
@@ -69,3 +69,39 @@
    5. gpa
    6. passing_year
    7. file
+
+8. Attendance
+   1. student
+   2. create_teacher
+   3. entry_date_time
+   4. out_date_time
+9. Assignment
+   1. Sngle Assignment
+      1. teacher
+      2. class
+      3. student
+      4. subject
+      5. assignment_pdf
+      6. upload_file
+      7. assignment_point
+      8. end_date
+   2. Group Assignment
+      1. teacher
+      2. class
+      3. subject
+      4. studens[]
+      5. assignment_pdf
+      6. upload_file
+      7. assignment_point
+      8. end_date
+
+10. Admission
+    1. full_name
+    2. father_name
+    3. mother_name
+    4. Division
+    5. District
+    6. sub_district
+    7. area
+    8. class
+    9. 
