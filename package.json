@@ -1,0 +1,14 @@
+{
+  "name": "smart-school-and-chollege",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mohammadanarul/e-learning-pro.git",
+  "author": "mohammadanarul <mdanarul7075@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.2.6"
+  }
+}
