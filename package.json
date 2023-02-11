@@ -1,14 +1,25 @@
 {
-  "name": "smart-school-and-chollege",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/mohammadanarul/e-learning-pro.git",
-  "author": "mohammadanarul <mdanarul7075@gmail.com>",
-  "license": "MIT",
+  "name": "smart-school-and-college",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@material-tailwind/react": "^1.2.5",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.2.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "vite": "^4.1.0"
   }
 }
