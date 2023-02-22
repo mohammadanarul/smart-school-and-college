@@ -1,0 +1,34 @@
+.slider-picture {
+  width: 100%;
+  height: 80vh;
+  display: block;
+}
+
+.slider-picture img {
+  width: 100%;
+  height: 100%;
+}
+.slider-item {
+  position: relative;
+}
+
+.slider-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 5;
+}
+
+.slider-item::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
