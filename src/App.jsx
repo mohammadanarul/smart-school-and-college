@@ -1,24 +1,25 @@
-import { Button } from "@material-tailwind/react";
 import { useState } from "react";
 import "./App.css";
+import Admit from "./components/Admit/Admit";
+import Benefits from "./components/Benefits/Benefits";
+import FooterArea from "./components/FooterArea/FooterArea";
+import Navigation from "./components/Navbar/Navigation";
+import Schedule from "./components/Schedule/Schedule";
+import BannerSlider from "./components/Slider/BannerSlider";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button color="red" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="">
+      <Navigation />
+      <BannerSlider />
+      <Benefits />
+      <Schedule />
+      <Testimonial />
+      <Admit />
+      <FooterArea />
     </div>
   );
 }
