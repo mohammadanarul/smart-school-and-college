@@ -1,9 +1,13 @@
 import { Card } from "flowbite-react";
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Admit = () => {
+  const handleAdmit = () => {
+    useNavigate("/admission");
+  };
   return (
-    <div className="lg:container mx-auto py-5">
+    <div className="lg:container mx-auto py-10">
       <Card>
         <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
           Now, You can Admit your Child to our School
@@ -15,56 +19,54 @@ const Admit = () => {
         <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <a
             href="#"
-            className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-teal-500 px-4 py-2.5 text-white hover:bg-rose-600  focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
           >
             <svg
+              fill="none"
+              stroke="currentColor"
               className="mr-3 h-7 w-7"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="apple"
-              role="img"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
+              aria-hidden="true"
             >
               <path
-                fill="currentColor"
-                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
-              />
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"
+              ></path>
             </svg>
             <div className="text-left">
-              <div className="mb-1 text-xs">Download on the</div>
               <div className="-mt-1 font-sans text-sm font-semibold">
-                Classes Schedule
+                Existing Student
               </div>
             </div>
           </a>
-          <a
-            href="#"
-            className="inline-flex w-full items-center justify-center rounded-lg bg-gray-800 px-4 py-2.5 text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
+          <Link
+            to="/admission"
+            className=" bg-rose-600 inline-flex w-full items-center justify-center rounded-lg px-4 py-2.5 text-white hover:bg-teal-500 focus:outline-none focus:ring-4 focus:ring-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 sm:w-auto"
           >
             <svg
+              fill="none"
               className="mr-3 h-7 w-7"
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fab"
-              data-icon="google-play"
-              role="img"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
+              aria-hidden="true"
             >
               <path
-                fill="currentColor"
-                d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
               />
             </svg>
             <div className="text-left">
-              <div className="mb-1 text-xs">Get in on</div>
               <div className="-mt-1 font-sans text-sm font-semibold">
-                Admission
+                Admission Now
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </Card>
     </div>

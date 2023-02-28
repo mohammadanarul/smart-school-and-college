@@ -1,9 +1,9 @@
-import { Card } from "flowbite-react";
+import { Button, Card } from "flowbite-react";
 import React from "react";
 
 const BenefitsItem = ({ item }) => {
   return (
-    <Card>
+    <Card className="text-center">
       <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {item.title}
@@ -13,10 +13,7 @@ const BenefitsItem = ({ item }) => {
         Here are the biggest enterprise technology acquisitions of 2021 so far,
         in reverse chronological order.
       </p>
-      <a
-        href="#"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
+      <Button className="mx-auto bg-teal-500 hover:bg-orange-200 hover:text-teal-700">
         Read more
         <svg
           aria-hidden="true"
@@ -31,7 +28,7 @@ const BenefitsItem = ({ item }) => {
             clip-rule="evenodd"
           ></path>
         </svg>
-      </a>
+      </Button>
     </Card>
   );
 };

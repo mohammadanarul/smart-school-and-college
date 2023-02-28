@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 const navItem = [
   {
     name: "Home",
@@ -62,17 +63,17 @@ export default function Navigation() {
           className="p-1 font-normal"
           key={nav.name}
         >
-          <a href={nav.path} className="flex items-center">
+          <NavLink to={nav.path} className="flex items-center">
             {nav.name}
-          </a>
+          </NavLink>
         </Typography>
       ))}
     </ul>
   );
 
   return (
-    <Navbar className="">
-      <div className="container mx-auto max-w-screen-xl">
+    <Navbar className="mx-auto shadow-none">
+      <div className="container">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"

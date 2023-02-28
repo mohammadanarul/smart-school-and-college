@@ -15,7 +15,7 @@ const data = [
 
 const Benefits = () => {
   return (
-    <div className="lg:container mx-auto">
+    <div className="lg:container mx-auto my-10">
       <div className="benefitsArea grid grid-cols-3 gap-4">
         {data.map((item) => (
           <BenefitsItem key={item} item={item} />
