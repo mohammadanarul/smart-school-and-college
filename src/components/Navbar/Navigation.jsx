@@ -6,6 +6,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Login from "../Login/Login";
 const navItem = [
   {
     name: "Home",
@@ -19,6 +21,7 @@ const navItem = [
     name: "Stuff",
     path: "/Stuff",
   },
+  { name: "Teacher", path: "/teacher" },
   {
     name: "Students",
     path: "/students",
@@ -44,6 +47,13 @@ const navItem = [
 
 export default function Navigation() {
   const [openNav, setOpenNav] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpenLogin = () => {
+    setOpen(true);
+  };
+  const handleCloseLogin = () => {
+    setOpen(false);
+  };
 
   useEffect(() => {
     window.addEventListener(
@@ -62,17 +72,17 @@ export default function Navigation() {
           className="p-1 font-normal"
           key={nav.name}
         >
-          <a href={nav.path} className="flex items-center">
+          <NavLink to={nav.path} className="flex items-center">
             {nav.name}
-          </a>
+          </NavLink>
         </Typography>
       ))}
     </ul>
   );
 
   return (
-    <Navbar className="">
-      <div className="container mx-auto max-w-screen-xl">
+    <Navbar className="mx-auto shadow-none">
+      <div className="container">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as="a"
@@ -80,16 +90,22 @@ export default function Navigation() {
             variant="h3"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
-            <span>Material Tailwind</span>
+            <span>Smart School</span>
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <Button
             // variant="gradient"
             size="sm"
             className="hidden lg:inline-block bg-teal-500"
+            onClick={handleOpenLogin}
           >
             <span>Login</span>
           </Button>
+          <Login
+            open={open}
+            handleCloseLogin={handleCloseLogin}
+            handleOpenLogin={handleOpenLogin}
+          />
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -131,7 +147,13 @@ export default function Navigation() {
         <MobileNav open={openNav}>
           <div className="container mx-auto">
             {navList}
-            <Button variant="gradient" size="sm" fullWidth className="mb-2">
+            <Button
+              variant="gradient"
+              size="sm"
+              fullWidth
+              className="mb-2"
+              onClick={handleOpenLogin}
+            >
               <span>Login</span>
             </Button>
           </div>

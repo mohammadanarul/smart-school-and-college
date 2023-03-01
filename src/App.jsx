@@ -1,25 +1,20 @@
-import { useState } from "react";
-import "./App.css";
-import Admit from "./components/Admit/Admit";
-import Benefits from "./components/Benefits/Benefits";
-import FooterArea from "./components/FooterArea/FooterArea";
+import { Route, Routes } from "react-router-dom";
+import Login from "./components/Login/Login";
 import Navigation from "./components/Navbar/Navigation";
-import Schedule from "./components/Schedule/Schedule";
-import BannerSlider from "./components/Slider/BannerSlider";
-import Testimonial from "./components/Testimonial/Testimonial";
+import Admission from "./pages/Admission/Admission";
+import Home from "./pages/Home/Home";
+import Teachers from "./pages/Teacher/Teachers";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="">
       <Navigation />
-      <BannerSlider />
-      <Benefits />
-      <Schedule />
-      <Testimonial />
-      <Admit />
-      <FooterArea />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/admission" element={<Admission />}></Route>
+        <Route path="/teacher" element={<Teachers />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+      </Routes>
     </div>
   );
 }

@@ -160,11 +160,6 @@ const Schedule = () => {
           <div>Active tab: {activeTab}</div>
         </>
       </div>
-      {/* <div className="schedule-items grid grid-cols-4 gap-2">
-        {scheduleData.map((item) => (
-          <ScheduleItem key={item.id} item={item} />
-        ))}
-      </div> */}
     </div>
   );
 };
