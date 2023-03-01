@@ -8,20 +8,25 @@ import {
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Login from "../Login/Login";
+import Dropdown from "./Menu";
 const navItem = [
   {
     name: "Home",
     path: "/",
   },
-  {
-    name: "Routine",
-    path: "/routine",
-  },
+
   {
     name: "Stuff",
     path: "/Stuff",
+    dropdown: [
+      { name: "Teacher", path: "/teacher" },
+      {
+        name: "Employee",
+        path: "/employee",
+      },
+    ],
   },
-  { name: "Teacher", path: "/teacher" },
+
   {
     name: "Students",
     path: "/students",
@@ -30,10 +35,7 @@ const navItem = [
     name: "Admission",
     path: "/admission",
   },
-  {
-    name: "Events",
-    path: "/events",
-  },
+
   {
     name: "E-Book",
     path: "/e-book",
@@ -41,6 +43,20 @@ const navItem = [
   {
     name: "Notices",
     path: "/notices",
+    dropdown: [
+      {
+        name: "Events",
+        path: "/events",
+      },
+      {
+        name: "Notices",
+        path: "/notices",
+      },
+      {
+        name: "Routine",
+        path: "/routine",
+      },
+    ],
   },
   { name: "Contact Us", path: "/contact" },
 ];
@@ -72,21 +88,25 @@ export default function Navigation() {
           className="p-1 font-normal"
           key={nav.name}
         >
-          <NavLink to={nav.path} className="flex items-center">
-            {nav.name}
-          </NavLink>
+          {nav.dropdown ? (
+            <Dropdown nav={nav} />
+          ) : (
+            <NavLink to={nav.path} className="flex items-center">
+              {nav.name}
+            </NavLink>
+          )}
         </Typography>
       ))}
     </ul>
   );
 
   return (
-    <Navbar className="mx-auto shadow-none">
-      <div className="container">
+    <div className="container mx-auto shadow-lg bg-transparent sticky top-0 z-10">
+      <Navbar className="border-0 bg-transparent">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
-            as="a"
-            href="#"
+            as={NavLink}
+            to="/"
             variant="h3"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
@@ -158,7 +178,7 @@ export default function Navigation() {
             </Button>
           </div>
         </MobileNav>
-      </div>
-    </Navbar>
+      </Navbar>
+    </div>
   );
 }
