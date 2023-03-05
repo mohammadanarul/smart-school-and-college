@@ -1,4 +1,8 @@
 import { Route, Routes } from "react-router-dom";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import FooterArea from "./components/FooterArea/FooterArea";
 import Login from "./components/Login/Login";
 import Navigation from "./components/Navbar/Navigation";
