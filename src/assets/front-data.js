@@ -97,7 +97,55 @@ const fromInfo = [
     },
   ];
 
+  const reviews=[
+    {
+      id:1,
+      name: 'Lorem Ipsum 1'
+    },
+    {
+      id:2,
+      name: 'Lorem Ipsum 2'
+    },
+    {
+      id:3,
+      name: 'Lorem Ipsum 3'
+    },
+    {
+      id:4,
+      name: 'Lorem Ipsum 4'
+    },
+    {
+      id:5,
+      name: 'Lorem Ipsum 5'
+    },
+    {
+      id:6,
+      name: 'Lorem Ipsum 6'
+    },
+    {
+      id:7,
+      name: 'Lorem Ipsum 7'
+    },
+    {
+      id:8,
+      name: 'Lorem Ipsum 8'
+    },
+    {
+      id:9,
+      name: 'Lorem Ipsum 9'
+    },
+    {
+      id:10,
+      name: 'Lorem Ipsum 10'
+    },
+    {
+      id:1,
+      name: 'Lorem Ipsum 1'
+    },
+  ]
 
   export {
-    fromInfo
+  fromInfo,
+  reviews
 };
+
