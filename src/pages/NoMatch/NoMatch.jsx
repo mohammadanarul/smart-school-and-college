@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NoMatch = () => {
   return (
@@ -17,8 +18,8 @@ const NoMatch = () => {
           Sorry, the page you are looking for could not be found or has been
           removed.
         </p>
-        <a
-          href="javascript:void(0)"
+        <NavLink
+          to="/"
           className="text-indigo-600 duration-150 hover:text-indigo-400 font-medium inline-flex items-center gap-x-1"
         >
           Go back
@@ -34,7 +35,7 @@ const NoMatch = () => {
               clipRule="evenodd"
             />
           </svg>
-        </a>
+        </NavLink>
       </div>
     </div>
   );
