@@ -101,8 +101,8 @@ export default function Navigation() {
   );
 
   return (
-    <div className="container mx-auto shadow-lg bg-transparent sticky top-0 z-10">
-      <Navbar className="border-0 bg-transparent">
+    <Navbar className="border-none shadow-none mx-auto w-full sticky top-0 z-10">
+      <div className="container ">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Typography
             as={NavLink}
@@ -178,7 +178,7 @@ export default function Navigation() {
             </Button>
           </div>
         </MobileNav>
-      </Navbar>
-    </div>
+      </div>
+    </Navbar>
   );
 }

@@ -89,7 +89,7 @@ const Admission = () => {
                     type={item.type}
                     required={item.require}
                     placeholder={item.placeholder}
-                    className="focus:border-teal-600 active:border-teal-600"
+                    className="focus:border-teal-600 active:border-teal-600 "
                     {...register(`${item.name}`, {
                       required: `${item.require}`,
                     })}
