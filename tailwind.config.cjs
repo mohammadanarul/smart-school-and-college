@@ -1,12 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
-module.exports = withMT( {
+module.exports = withMT({
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    './node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'
+    "./src/**/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
-   theme: {
+  theme: {
     colors: {
       teal: {
         50: "#f0fdfa",
@@ -60,8 +61,8 @@ module.exports = withMT( {
     },
   },
   plugins: [
-    require('flowbite/plugin'),
-    require('tailwindcss-textshadow'),
-    require('@tailwindcss/forms'),
+    require("flowbite/plugin"),
+    require("tailwindcss-textshadow"),
+    require("@tailwindcss/forms"),
   ],
-})
+});
