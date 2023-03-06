@@ -15,7 +15,7 @@ export default function Dropdown({ nav }) {
       }}
     >
       <MenuHandler>
-        <NavLink variant="gradient" className="flex items-center">
+        <NavLink variant="gradient" className="flex items-center font-bold">
           {nav.name}{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,9 @@ export default function Dropdown({ nav }) {
       <MenuList>
         {nav.dropdown.map((item) => (
           <MenuItem key={item.name}>
-            <NavLink to={item.path}>{item.name}</NavLink>
+            <NavLink to={item.path} className={"uppercase font-bold"}>
+              {item.name}
+            </NavLink>
           </MenuItem>
         ))}
       </MenuList>
