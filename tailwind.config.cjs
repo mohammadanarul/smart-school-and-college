@@ -62,6 +62,5 @@ module.exports = withMT( {
   plugins: [
     require('flowbite/plugin'),
     require('tailwindcss-textshadow'),
-    require('@tailwindcss/forms'),
   ],
 })
