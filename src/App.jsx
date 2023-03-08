@@ -30,7 +30,6 @@ function App() {
         <Route path="/notices" element={<Notice />}></Route>
         <Route path="/routine" element={<Routine />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/students" element={<Contact />}></Route>
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
       <Footer />

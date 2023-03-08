@@ -28,10 +28,6 @@ const navItem = [
   },
 
   {
-    name: "Students",
-    path: "/students",
-  },
-  {
     name: "Admission",
     path: "/admission",
   },
@@ -79,7 +75,7 @@ export default function Navigation() {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 uppercase ">
       {navItem.map((nav) => (
         <Typography
           as="li"
@@ -91,7 +87,7 @@ export default function Navigation() {
           {nav.dropdown ? (
             <Dropdown nav={nav} />
           ) : (
-            <NavLink to={nav.path} className="flex items-center">
+            <NavLink to={nav.path} className="flex items-center font-bold">
               {nav.name}
             </NavLink>
           )}
@@ -110,7 +106,7 @@ export default function Navigation() {
             variant="h3"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
-            <span>Smart School</span>
+            <img src="http://localhost:5173/images/logo.png" alt="Logo" />
           </Typography>
           <div className="hidden lg:block">{navList}</div>
           <Button

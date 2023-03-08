@@ -157,7 +157,6 @@ const Schedule = () => {
               </Tabs.Item>
             ))}
           </Tabs.Group>
-          <div>Active tab: {activeTab}</div>
         </>
       </div>
     </div>
