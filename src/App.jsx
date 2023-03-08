@@ -13,7 +13,6 @@ import Home from "./pages/Home/Home";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Notice from "./pages/Notice/Notice";
 import Routine from "./pages/Routine/Routine";
-import Students from "./pages/Student/Students";
 import TeacherDetails from "./pages/Teacher/TeacherDetails";
 import Teachers from "./pages/Teacher/Teachers";
 
@@ -31,7 +30,6 @@ function App() {
         <Route path="/notices" element={<Notice />}></Route>
         <Route path="/routine" element={<Routine />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/students" element={<Students />}></Route>
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
       <Footer />

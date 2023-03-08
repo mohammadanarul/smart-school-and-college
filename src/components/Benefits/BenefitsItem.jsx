@@ -16,7 +16,7 @@ const BenefitsItem = ({ item }) => {
         Here are the biggest enterprise technology acquisitions of 2021 so far,
         in reverse chronological order.
       </p>
-      <Button className="mx-auto bg-teal-500 hover:bg-orange-200 hover:text-teal-700">
+      <Button className="mx-auto bg-rose-50 hover:bg-teal-800 text-teal-800 hover:text-rose-50 duration-300 ">
         Read more
         <svg
           aria-hidden="true"

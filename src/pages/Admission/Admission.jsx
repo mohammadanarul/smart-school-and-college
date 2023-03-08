@@ -23,7 +23,7 @@ const Admission = () => {
 
   return (
     <div>
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-8">
         <Card>
           <Typography variant="h2" className="text-teal-600 py-5">
             Student Admission form

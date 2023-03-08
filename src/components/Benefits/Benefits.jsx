@@ -3,13 +3,13 @@ import BenefitsItem from "./BenefitsItem";
 
 const data = [
   {
-    title: "Fast Support",
+    title: "School Bus",
   },
   {
-    title: "What we do",
+    title: "School Hostel",
   },
   {
-    title: "Creative Ideas",
+    title: "Research Lab",
   },
 ];
 

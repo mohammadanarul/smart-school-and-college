@@ -28,10 +28,6 @@ const navItem = [
   },
 
   {
-    name: "Students",
-    path: "/students",
-  },
-  {
     name: "Admission",
     path: "/admission",
   },
