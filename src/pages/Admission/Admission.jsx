@@ -1,111 +1,111 @@
-import { Typography } from "@material-tailwind/react";
-import axios from "axios";
-import { Button, Card, Label, Select, TextInput } from "flowbite-react";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { fromInfo } from "../../assets/front-data";
+import { Button, Checkbox, Typography } from "@material-tailwind/react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Admission = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => {
-    axios
-      .post("https://ssc-api.vercel.app/api/v1/users/student/admission/", data)
-      .then((d) => console.log(d))
-      .catch((e) => console.log(e.message));
-  };
-
-  console.log(watch("example"));
-
+  const [admit, setAdmit] = useState(true);
+  const navigate = useNavigate();
   return (
     <div>
-      <div className="container mx-auto mt-8">
-        <Card>
-          <Typography variant="h2" className="text-teal-600 py-5">
-            Student Admission form
-          </Typography>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-2 gap-4"
-          >
-            {fromInfo.map((item) => {
-              if (item.type === "select") {
-                return (
-                  <Select {...register(item.name)} key={item.name}>
-                    {item.option.map((subItem) => (
-                      <option value={subItem.value}>{subItem.name}</option>
-                    ))}
-                  </Select>
-                );
-              }
-              if (item.type === "radio") {
-                return (
-                  <fieldset
-                    key={item.name}
-                    className="flex flex-col gap-4"
-                    {...register(`${item.name}`, {
-                      required: `${item.require}`,
-                    })}
-                  >
-                    <Label className="font-extrabold">Chose Your Gender</Label>
-                    <div className="flex gap-2">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type={item.type}
-                          id="male"
-                          name={item.name}
-                          value="male"
-                        />
-                        <Label htmlFor="male">Male</Label>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <input
-                          type={item.type}
-                          id="female"
-                          name={item.name}
-                          value="female"
-                        />
-                        <Label htmlFor="female">Female</Label>
-                      </div>
-                    </div>
-                  </fieldset>
-                );
-              }
-              return (
-                <div className="" key={item.name}>
-                  <div className="mb-2 block">
-                    <Label
-                      className="font-extrabold text-gray-800"
-                      htmlFor={item.name}
-                      value={item.label}
-                    />
-                  </div>
-                  <TextInput
-                    id={item.name}
-                    type={item.type}
-                    required={item.require}
-                    placeholder={item.placeholder}
-                    className="focus:border-teal-600 active:border-teal-600 "
-                    {...register(`${item.name}`, {
-                      required: `${item.require}`,
-                    })}
-                  />
-                  {errors[`${item.name}`] && (
-                    <span>This field is required</span>
-                  )}
-                </div>
-              );
-            })}
+      <div className="container mx-auto">
+        <Typography variant="h2">Admission Rules and Regulation</Typography>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="py-5">
+            <Typography variant="h3" className="border-bottom-1 border">
+              Requirement Rules
+            </Typography>
+            <ul className="list-disc">
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+            </ul>
+          </div>
+          <div className="py-5">
+            <Typography variant="h3" className="border border-bottom-10 ">
+              Optional Rules
+            </Typography>
+            <ul>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+              <li>
+                Now this is a story all about how, my life got flipped-turned
+                upside down
+              </li>
+            </ul>
+          </div>
+        </div>
 
-            <Button className="mx-auto" type="submit">
-              Submit
-            </Button>
-          </form>
-        </Card>
+        <div className="admission-area my-5">
+          <Checkbox
+            onChange={() => setAdmit(!admit)}
+            label={
+              <Typography
+                variant="small"
+                color="gray"
+                className="flex items-center font-normal"
+              >
+                I agree to this Rules & Regulations
+              </Typography>
+            }
+            containerProps={{ className: "-ml-2.5" }}
+          />
+          <br />
+
+          <Button
+            className="bg-teal-500"
+            disabled={admit ? true : false}
+            onClick={() => navigate("/admission/admission-form")}
+          >
+            Admit Now
+          </Button>
+        </div>
       </div>
     </div>
   );

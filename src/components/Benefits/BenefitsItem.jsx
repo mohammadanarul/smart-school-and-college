@@ -1,11 +1,13 @@
-import { Button, Card } from "flowbite-react";
+import { Button, Card, CardHeader } from "@material-tailwind/react";
 import React from "react";
 
 const BenefitsItem = ({ item }) => {
   return (
-    <Card className="text-center">
-      <div>
-        <img src="" alt="" />
+    <Card className="text-center py-5">
+      <div className=" -mt-16">
+        <CardHeader className=" rounded-full  w-36 h-36 m-auto p-5">
+          <img src={item.img} alt={item.title} className="h-full w-full  " />
+        </CardHeader>
       </div>
       <a href="#">
         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -16,7 +18,7 @@ const BenefitsItem = ({ item }) => {
         Here are the biggest enterprise technology acquisitions of 2021 so far,
         in reverse chronological order.
       </p>
-      <Button className="mx-auto bg-rose-50 hover:bg-teal-800 text-teal-800 hover:text-rose-50 duration-300 ">
+      <Button className="mx-auto bg-rose-50 text-teal-800  hover:bg-teal-800 hover:text-rose-50 duration-300 flex items-center ">
         Read more
         <svg
           aria-hidden="true"
