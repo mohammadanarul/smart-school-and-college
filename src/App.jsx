@@ -1,24 +1,47 @@
-import { Button } from "@material-tailwind/react";
-import { useState } from "react";
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { Footer } from "./components/FooterArea/FooterArea";
+import Login from "./components/Login/Login";
+import Navigation from "./components/Navbar/Navigation";
+import About from "./pages/About/About";
+import Admission from "./pages/Admission/Admission";
+import AdmissionForm from "./pages/Admission/AdmissionForm";
+import Contact from "./pages/Contact/Contact";
+import EBook from "./pages/EBook/EBook";
+import Event from "./pages/Event/Event";
+import Home from "./pages/Home/Home";
+import NoMatch from "./pages/NoMatch/NoMatch";
+import Notice from "./pages/Notice/Notice";
+import Routine from "./pages/Routine/Routine";
+import TeacherDetails from "./pages/Teacher/TeacherDetails";
+import Teachers from "./pages/Teacher/Teachers";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button color="red" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div className="bg-[url('http://localhost:5173/images/bg-patern.jpg')] bg-repeat">
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/admission" element={<Admission />}></Route>
+        <Route
+          path="/admission/admission-form"
+          element={<AdmissionForm />}
+        ></Route>
+        <Route path="/teacher/:teacherId" element={<TeacherDetails />}></Route>
+        <Route path="/teacher" element={<Teachers />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/events" element={<Event />}></Route>
+        <Route path="/notices" element={<Notice />}></Route>
+        <Route path="/routine" element={<Routine />}></Route>
+        <Route path="/e-book" element={<EBook />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="*" element={<NoMatch />}></Route>
+      </Routes>
+      <Footer />
     </div>
   );
 }
