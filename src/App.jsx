@@ -38,7 +38,9 @@ function App() {
         <Route path="/routine" element={<Routine />}></Route>
         <Route path="/e-book" element={<EBook />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+
         <Route path="/about" element={<About />}></Route>
+
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
       <Footer />
