@@ -6,8 +6,11 @@ import "swiper/css/pagination";
 import { Footer } from "./components/FooterArea/FooterArea";
 import Login from "./components/Login/Login";
 import Navigation from "./components/Navbar/Navigation";
+import About from "./pages/About/About";
 import Admission from "./pages/Admission/Admission";
+import AdmissionForm from "./pages/Admission/AdmissionForm";
 import Contact from "./pages/Contact/Contact";
+import EBook from "./pages/EBook/EBook";
 import Event from "./pages/Event/Event";
 import Home from "./pages/Home/Home";
 import NoMatch from "./pages/NoMatch/NoMatch";
@@ -23,13 +26,21 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/admission" element={<Admission />}></Route>
+        <Route
+          path="/admission/admission-form"
+          element={<AdmissionForm />}
+        ></Route>
         <Route path="/teacher/:teacherId" element={<TeacherDetails />}></Route>
         <Route path="/teacher" element={<Teachers />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/events" element={<Event />}></Route>
         <Route path="/notices" element={<Notice />}></Route>
         <Route path="/routine" element={<Routine />}></Route>
+        <Route path="/e-book" element={<EBook />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+
+        <Route path="/about" element={<About />}></Route>
+
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
       <Footer />

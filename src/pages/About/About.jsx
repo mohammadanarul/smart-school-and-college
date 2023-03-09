@@ -1,14 +1,14 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 
-const Event = () => {
+const About = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <Typography variant="h2">There is No Event here</Typography>
+        <Typography variant="h2">This is About Page</Typography>
       </div>
     </div>
   );
 };
 
-export default Event;
+export default About;

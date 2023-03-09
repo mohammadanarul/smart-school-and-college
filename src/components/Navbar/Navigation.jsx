@@ -8,6 +8,7 @@ import {
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Login from "../Login/Login";
+import UserMenu from "../Utils/UserMenu";
 import Dropdown from "./Menu";
 const navItem = [
   {
@@ -60,6 +61,7 @@ const navItem = [
 export default function Navigation() {
   const [openNav, setOpenNav] = useState(false);
   const [open, setOpen] = useState(false);
+  const isAuthentication = true;
   const handleOpenLogin = () => {
     setOpen(true);
   };
@@ -109,19 +111,26 @@ export default function Navigation() {
             <img src="http://localhost:5173/images/logo.png" alt="Logo" />
           </Typography>
           <div className="hidden lg:block">{navList}</div>
-          <Button
-            // variant="gradient"
-            size="sm"
-            className="hidden lg:inline-block bg-teal-500"
-            onClick={handleOpenLogin}
-          >
-            <span>Login</span>
-          </Button>
-          <Login
-            open={open}
-            handleCloseLogin={handleCloseLogin}
-            handleOpenLogin={handleOpenLogin}
-          />
+
+          {isAuthentication ? (
+            <UserMenu />
+          ) : (
+            <>
+              <Button
+                // variant="gradient"
+                size="sm"
+                className="hidden lg:inline-block bg-teal-500"
+                onClick={handleOpenLogin}
+              >
+                <span>Login</span>
+              </Button>
+              <Login
+                open={open}
+                handleCloseLogin={handleCloseLogin}
+                handleOpenLogin={handleOpenLogin}
+              />
+            </>
+          )}
           <IconButton
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

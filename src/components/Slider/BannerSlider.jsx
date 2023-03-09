@@ -58,7 +58,7 @@ export default function BannerSlider() {
                     corrupti eos iusto sed totam doloremque aspernatur. Cumque,
                     praesentium?
                   </Typography>
-                  <Button className="flex items-center mt-3">
+                  <Button className="flex items-center bg-rose-600 hover:bg-rose-900 duration-300 mt-3">
                     View More
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -1,8 +1,8 @@
-import { Typography } from "@material-tailwind/react";
 import { Tabs } from "flowbite-react";
 import React, { useRef, useState } from "react";
 import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
 import { MdDashboard } from "react-icons/md";
+import SectionHeading from "../Utils/SectionHeading";
 import ScheduleItem from "./ScheduleItem";
 const scheduleData = [
   {
@@ -128,11 +128,7 @@ const Schedule = () => {
   const tabsRef = useRef(null);
   return (
     <div className="lg:container mx-auto">
-      <div className="schedule-heading">
-        <Typography variant="h2" className="text-center">
-          Days & Classes Schedule
-        </Typography>
-      </div>
+      <SectionHeading> Days & Classes Schedule</SectionHeading>
       <div className="schedule-menu mx-auto">
         <>
           <Tabs.Group
