@@ -4,6 +4,7 @@ import BenefitsItem from "./BenefitsItem";
 const data = [
   {
     title: "School Bus",
+
     img: "http://localhost:5173/images/school-bus.svg",
   },
   {
@@ -13,6 +14,7 @@ const data = [
   {
     title: "Research Lab",
     img: "http://localhost:5173/images/lab.svg",
+
   },
 ];
 

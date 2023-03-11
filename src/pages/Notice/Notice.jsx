@@ -3,8 +3,10 @@ import React, { useLayoutEffect, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { reviews } from "../../assets/front-data";
+
 import { Footer } from "../../components/FooterArea/FooterArea";
 import { Navigation as NavigationBar } from "../../components/Navbar/Navigation";
+
 
 const Notice = () => {
   const [notice, setNotice] = useState({});

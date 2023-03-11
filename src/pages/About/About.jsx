@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
+
 import { Footer } from "../../components/FooterArea/FooterArea";
 import Navigation from "../../components/Navbar/Navigation";
 
@@ -12,7 +13,8 @@ const About = () => {
       </div>
       <Footer />
     </>
-  );
-};
+
+
+
 
 export default About;
