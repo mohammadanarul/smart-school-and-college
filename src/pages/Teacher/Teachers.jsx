@@ -1,5 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
+import { Footer } from "../../components/FooterArea/FooterArea";
+import Navigation from "../../components/Navbar/Navigation";
 import HrTab from "../../components/Tabs/HrTabs";
 
 const teachers = [
@@ -72,15 +74,19 @@ const teachers = [
 
 const Teachers = () => {
   return (
-    <div className="container mx-auto">
-      <Typography variant="h2">All Teacher List of school</Typography>
-      <HrTab item={teachers} />
-      {/* <div className="grid grid-cols-4 gap-4">
+    <>
+      <Navigation />
+      <div className="container mx-auto">
+        <Typography variant="h2">All Teacher List of school</Typography>
+        <HrTab item={teachers} />
+        {/* <div className="grid grid-cols-4 gap-4">
         {teachers.map((person) => (
           <Teacher key={person.id} teacher={person}></Teacher>
-        ))}
-      </div> */}
-    </div>
+          ))}
+        </div> */}
+      </div>
+      <Footer />
+    </>
   );
 };
 
