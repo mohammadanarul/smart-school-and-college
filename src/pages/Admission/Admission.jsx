@@ -2,11 +2,18 @@ import { Button, Checkbox, Typography } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { Footer } from "../../components/FooterArea/FooterArea";
+import Navigation from "../../components/Navbar/Navigation";
+
+
 const Admission = () => {
   const [admit, setAdmit] = useState(true);
   const navigate = useNavigate();
   return (
-    <div>
+
+    <>
+      <Navigation />
+
       <div className="container mx-auto">
         <Typography variant="h2">Admission Rules and Regulation</Typography>
         <div className="grid grid-cols-2 gap-4">
@@ -84,6 +91,9 @@ const Admission = () => {
 
         <div className="admission-area my-5">
           <Checkbox
+
+            className="focus:border-teal-600 target:border-teal-600 focus:outline-0 border-spacing-0"
+
             onChange={() => setAdmit(!admit)}
             label={
               <Typography
@@ -94,7 +104,9 @@ const Admission = () => {
                 I agree to this Rules & Regulations
               </Typography>
             }
+
             containerProps={{ className: "-ml-2.5" }}
+
           />
           <br />
 
@@ -107,7 +119,8 @@ const Admission = () => {
           </Button>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
