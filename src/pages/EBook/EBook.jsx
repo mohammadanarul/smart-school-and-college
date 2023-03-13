@@ -1,10 +1,12 @@
 import React from "react";
 import { Footer } from "../../components/FooterArea/FooterArea";
 import Navigation from "../../components/Navbar/Navigation";
+
 import SectionHeading from "../../components/Utils/SectionHeading";
 
 const EBook = () => {
   return (
+
     <>
       <Navigation />
       <div className="container mx-auto">
@@ -12,6 +14,7 @@ const EBook = () => {
       </div>
       <Footer />
     </>
+
   );
 };
 

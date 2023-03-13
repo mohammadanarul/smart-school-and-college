@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { reviews } from "../../assets/front-data";
+
 import { Footer } from "../../components/FooterArea/FooterArea";
 // import {  NavigationBar as Navigation } from "../../components/Navbar/Navigation";
 
@@ -11,7 +12,7 @@ const Notice = () => {
   useLayoutEffect(() => {
     setNotice(reviews[0]);
   }, []);
-  console.log(notice);
+
   return (
     <>
       {/* <NavigationBar /> */}

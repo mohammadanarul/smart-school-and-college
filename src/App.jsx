@@ -9,7 +9,9 @@ import About from "./pages/About/About";
 import Admission from "./pages/Admission/Admission";
 import AdmissionForm from "./pages/Admission/AdmissionForm";
 import Contact from "./pages/Contact/Contact";
+
 import Dashboard from "./pages/Dashboard/Dashboard";
+
 import EBook from "./pages/EBook/EBook";
 import Event from "./pages/Event/Event";
 import Home from "./pages/Home/Home";
