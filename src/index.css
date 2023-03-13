@@ -5,3 +5,6 @@
 button {
   @apply bg-teal-500 text-white;
 }
+.d_active {
+  @apply bg-teal-600 text-white;
+}
