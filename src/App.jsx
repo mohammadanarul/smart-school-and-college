@@ -5,6 +5,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 import { ProtectedRoute } from "./components/Utils/ProtecteRoute";
+
 import About from "./pages/About/About";
 import Admission from "./pages/Admission/Admission";
 import AdmissionForm from "./pages/Admission/AdmissionForm";
@@ -39,6 +40,8 @@ function App() {
         <Route path="/events" element={<Event />}></Route>
         <Route path="/notices" element={<Notice />}></Route>
         <Route path="/routine" element={<Routine />}></Route>
+
+        <Route path="/dashboard" element={<Dashboard />}></Route>
         <Route path="/e-book" element={<EBook />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/about" element={<About />}></Route>

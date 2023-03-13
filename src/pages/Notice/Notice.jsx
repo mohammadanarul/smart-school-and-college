@@ -5,7 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { reviews } from "../../assets/front-data";
 
 import { Footer } from "../../components/FooterArea/FooterArea";
+
 // import {  NavigationBar as Navigation } from "../../components/Navbar/Navigation";
+
 
 const Notice = () => {
   const [notice, setNotice] = useState({});
@@ -15,7 +17,9 @@ const Notice = () => {
 
   return (
     <>
+
       {/* <NavigationBar /> */}
+
       <div className="container mx-auto">
         <div className="grid grid-cols-4 gap-2">
           <div className="col-span-3">
