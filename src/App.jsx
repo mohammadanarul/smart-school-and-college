@@ -3,9 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Login from "./components/Login/Login";
 
-import Navigation from "./components/Navbar/Navigation";
+import { ProtectedRoute } from "./components/Utils/ProtecteRoute";
 
 import About from "./pages/About/About";
 import Admission from "./pages/Admission/Admission";
@@ -17,6 +16,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import EBook from "./pages/EBook/EBook";
 import Event from "./pages/Event/Event";
 import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Notice from "./pages/Notice/Notice";
 import Routine from "./pages/Routine/Routine";
@@ -45,7 +45,14 @@ function App() {
         <Route path="/e-book" element={<EBook />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/about" element={<About />}></Route>
-
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        ></Route>
         <Route path="*" element={<NoMatch />}></Route>
       </Routes>
       {/* <Footer /> */}
