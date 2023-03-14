@@ -24,7 +24,9 @@ const TeacherForm = ({ open, handleClose, handleOpen }) => {
         <div className="logo">
           <img
             className="mx-auto"
-            src="http://localhost:5173/images/logo.png"
+
+            src="https://smart-school-and-college.vercel.app/images/logo.png"
+
             alt="Logo"
           />
         </div>

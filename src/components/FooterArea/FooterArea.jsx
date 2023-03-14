@@ -8,7 +8,10 @@ export const Footer = () => {
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <NavLink to={"/"}>
-              <img src="http://localhost:5173/images/logo.png" alt="Logo" />
+              <img
+                src="https://smart-school-and-college.vercel.app/images/logo.png"
+                alt="Logo"
+              />
             </NavLink>
 
             <div className="mt-6 lg:max-w-sm">

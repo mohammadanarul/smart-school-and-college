@@ -5,16 +5,15 @@ const data = [
   {
     title: "School Bus",
 
-    img: "http://localhost:5173/images/school-bus.svg",
+    img: "https://smart-school-and-college.vercel.app/images/school-bus.svg",
   },
   {
     title: "School Hostel",
-    img: "http://localhost:5173/images/hostel.svg",
+    img: "https://smart-school-and-college.vercel.app/images/hostel.svg",
   },
   {
     title: "Research Lab",
-    img: "http://localhost:5173/images/lab.svg",
-
+    img: "http://localhost:5173images/lab.svg",
   },
 ];
 
