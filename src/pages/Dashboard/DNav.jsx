@@ -46,7 +46,7 @@ const DNav = () => {
                 className="text-xl font-bold flex items-center lg:ml-2.5"
               >
                 <img
-                  src="http://localhost:5173/images/logo.png"
+                  src="https://smart-school-and-college.vercel.app/images/logo.png"
                   className=" mr-2"
                   alt="Windster Logo"
                 />

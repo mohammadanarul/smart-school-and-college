@@ -25,7 +25,7 @@ import Teachers from "./pages/Teacher/Teachers";
 
 function App() {
   return (
-    <div className="bg-[url('http://localhost:5173/images/bg-patern.jpg')] bg-repeat">
+    <div className="bg-[url('https://smart-school-and-college.vercel.app/images/bg-patern.jpg')] bg-repeat">
       {/* <Navigation /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>

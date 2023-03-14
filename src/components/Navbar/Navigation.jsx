@@ -109,7 +109,10 @@ export default function Navigation() {
             variant="h3"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
-            <img src="http://localhost:5173/images/logo.png" alt="Logo" />
+            <img
+              src="https://smart-school-and-college.vercel.app/images/logo.png"
+              alt="Logo"
+            />
           </Typography>
           <div className="hidden lg:block">{navList}</div>
 
