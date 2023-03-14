@@ -49,6 +49,7 @@ function App() {
           path="/dashboard"
           element={
             <ProtectedRoute>
+              {/* <Route path="/" element={<Dashboard />} /> */}
               <Dashboard />
             </ProtectedRoute>
           }
