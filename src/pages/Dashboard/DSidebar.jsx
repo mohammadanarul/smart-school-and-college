@@ -58,7 +58,6 @@ const DSidebar = () => {
                 <li>
                   <a
                     href="#"
-                    target="_blank"
                     className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group "
                   >
                     <svg
@@ -95,10 +94,7 @@ const DSidebar = () => {
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group "
-                  >
+                  <button className="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group ">
                     <svg
                       className="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75"
                       fill="currentColor"
@@ -112,7 +108,7 @@ const DSidebar = () => {
                       ></path>
                     </svg>
                     <span className="ml-3 flex-1 whitespace-nowrap">Users</span>
-                  </a>
+                  </button>
                 </li>
                 <li>
                   <a
