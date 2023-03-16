@@ -1,3 +1,6 @@
+
+import { Button } from "@material-tailwind/react";
+
 import React from "react";
 
 const DMain = () => {
@@ -57,6 +60,9 @@ const DMain = () => {
                 <div className="overflow-x-auto rounded-lg">
                   <div className="align-middle inline-block min-w-full">
                     <div className="shadow overflow-hidden sm:rounded-lg">
+
+                      <Button>Create Institute</Button>
+
                       <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">
                           <tr>
@@ -171,6 +177,7 @@ const DMain = () => {
                           </tr>
                         </tbody>
                       </table>
+
                     </div>
                   </div>
                 </div>

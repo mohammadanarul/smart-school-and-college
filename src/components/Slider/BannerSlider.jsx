@@ -2,17 +2,19 @@ const slide = [
   {
     id: 1,
     name: "Welcome To Our School",
-    image: "http://localhost:5173/images/undraw_back_to_school_inwc.svg",
+    image:
+      "https://smart-school-and-college.vercel.app/images/undraw_back_to_school_inwc.svg",
   },
   {
     id: 2,
     name: "Our School Building ",
-    image: "http://localhost:5173/images/building.svg",
+    image: "https://smart-school-and-college.vercel.app/images/building.svg",
   },
   {
     id: 3,
     name: "Library Room",
-    image: "http://localhost:5173/images/undraw_bookshelves_re_lxoy.svg",
+    image:
+      "https://smart-school-and-college.vercel.app/images/undraw_bookshelves_re_lxoy.svg",
   },
 ];
 import React from "react";

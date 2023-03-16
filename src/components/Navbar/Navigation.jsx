@@ -5,9 +5,9 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
+import { useStoreState } from "easy-peasy";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import Login from "../Login/Login";
+import { NavLink, useNavigate } from "react-router-dom";
 import UserMenu from "../Utils/UserMenu";
 import Dropdown from "./Menu";
 const navItem = [
@@ -60,10 +60,11 @@ const navItem = [
 
 export default function Navigation() {
   const [openNav, setOpenNav] = useState(false);
-  const [open, setOpen] = useState(false);
-  const isAuthentication = true;
+  const user = useStoreState((state) => state.userModel.user);
+  const navigate = useNavigate();
+
   const handleOpenLogin = () => {
-    setOpen(true);
+    navigate("/login");
   };
   const handleCloseLogin = () => {
     setOpen(false);
@@ -108,11 +109,14 @@ export default function Navigation() {
             variant="h3"
             className="mr-4 cursor-pointer py-1.5 font-normal"
           >
-            <img src="http://localhost:5173/images/logo.png" alt="Logo" />
+            <img
+              src="https://smart-school-and-college.vercel.app/images/logo.png"
+              alt="Logo"
+            />
           </Typography>
           <div className="hidden lg:block">{navList}</div>
 
-          {isAuthentication ? (
+          {user.isAuthenticate ? (
             <UserMenu />
           ) : (
             <>
@@ -124,11 +128,11 @@ export default function Navigation() {
               >
                 <span>Login</span>
               </Button>
-              <Login
+              {/* <Login
                 open={open}
                 handleCloseLogin={handleCloseLogin}
                 handleOpenLogin={handleOpenLogin}
-              />
+              /> */}
             </>
           )}
           <IconButton
